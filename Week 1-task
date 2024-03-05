@@ -71,15 +71,10 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <!-- Custom JS -->
     <script>
-        // Get the display element
         var display = document.getElementById("display");
-
-        // Function to clear the display
         function clearDisplay() {
             display.value = "0";
         }
-
-        // Function to delete the last character in the display
         function backspace() {
             var value = display.value;
             if (value.length > 1) {
@@ -88,8 +83,6 @@
                 clearDisplay();
             }
         }
-
-        // Function to append a digit to the display
         function appendDigit(digit) {
             var value = display.value;
             if (value == "0") {
@@ -98,16 +91,12 @@
                 display.value += digit;
             }
         }
-
-        // Function to append a decimal point to the display
         function appendDecimal() {
             var value = display.value;
             if (!value.includes(".")) {
                 display.value += ".";
             }
         }
-
-        // Function to append an operator to the display
         function appendOperator(operator) {
             var value = display.value;
             var lastChar = value[value.length - 1];
@@ -115,8 +104,6 @@
                 display.value += operator;
             }
         }
-
-        // Function to evaluate the expression in the display
         function calculate() {
             var value = display.value;
             var result = eval(value);
